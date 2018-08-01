@@ -13,9 +13,11 @@ This is my third project of the Advanced Front-End course, from Udacity Brasil. 
 ## Instructions
 You can clone or download this repository and then you'll need to run a local server (**localhost:8000**).  
 I used the [http-server](https://www.npmjs.com/package/http-server) package, but you can choose anything you want.
+
 For http-server:
 > npm install http-server -g  
 > http-server -p 8000
+
 You can also change the port on **dbhelper.js** file.
 
 ### Resources
