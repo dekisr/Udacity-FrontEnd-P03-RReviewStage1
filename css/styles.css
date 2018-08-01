@@ -95,10 +95,10 @@ header, main, footer {
 nav {
   background-color: rgb(35, 25, 30);
   width: 100%;
-  padding: 1rem;
-  text-align:center;
 }
 nav h1 {
+  padding: 1rem;
+  text-align:center;
   margin: auto;
 }
 nav h1 a {
@@ -275,7 +275,7 @@ nav h1 a:hover {
   width: 100%;
   max-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h3 {
   color: rgb(115, 50, 55);
   margin: .5rem 0;
   font-size: 1rem;
