@@ -76,16 +76,23 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    keyboard: false,
+    scrollWheelZoom: false,
+    zoomControl: false,
+    attributionControl: false
+  });
+  L.control.attribution({
+    prefix: '<a href="http://leafletjs.com/" tabindex="-1" target="_blank" rel="noopener noreferrer">Leaflet</a>'
+  }).addTo(newMap);
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiZGVraXNyIiwiYSI6ImNqanoxMHhudTYwZHEzdnJtNWk1bnpqd2YifQ.j88iBaA7iOApByrd4bOHDA',
     maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    attribution:
+      'Map data &copy; <a href="https://www.openstreetmap.org/" tabindex="-1" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/" tabindex="-1" target="_blank" rel="noopener noreferrer">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/" tabindex="-1" target="_blank" rel="noopener noreferrer">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
 
@@ -184,6 +191,9 @@ createRestaurantHTML = (restaurant) => {
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
+  li.setAttribute('tabindex', '0');
+  li.setAttribute('aria-label', `${restaurant.name} restaurant in ${restaurant.neighborhood}`)
+
   return li
 }
 
@@ -201,7 +211,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 
-} 
+}
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
@@ -218,7 +228,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
  */
 registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('/service-worker.js')
       .then(response => console.log(`SW State: ${response.active.state}`))
       .catch(err => console.log(err));
   } else return;

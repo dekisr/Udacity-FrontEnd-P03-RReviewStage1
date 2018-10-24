@@ -143,11 +143,6 @@ nav h1 a:hover {
   text-decoration: underline;
 }
 
-#breadcrumb li a:focus {
-  outline: 2px solid rgb(245, 65, 75);
-  box-shadow: 0 0 .5rem rgb(245, 65, 75);
-}
-
 /* ====================== Map ====================== */
 #map {
   background-color: hsl(0, 0%, 80%);
@@ -222,10 +217,6 @@ nav h1 a:hover {
 .filter-options select:last-of-type {
   margin-right: 0;
 }
-.filter-options select:focus {
-  outline: 2px solid rgb(245, 65, 75);
-  box-shadow: 0 0 .5rem rgb(245, 65, 75);
-}
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
@@ -240,6 +231,7 @@ nav h1 a:hover {
 }
 #restaurants-list li {
   background-color: hsl(0, 0%, 100%);
+  display: grid;
   width: 100%;
   margin-bottom: 1%;
   padding: 1%;
@@ -291,15 +283,12 @@ nav h1 a:hover {
   background-color: rgb(115, 50, 55);
   color: rgb(235, 230, 225);
   display: inline-block;
+  align-self: end;
   margin: 1rem 0 0;
   padding: .5rem 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}
-#restaurants-list li a:focus {
-  outline: 2px solid rgb(245, 65, 75);
-  box-shadow: 0 0 .5rem rgb(245, 65, 75);
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -369,7 +358,7 @@ nav h1 a:hover {
 #reviews-container {
   padding: 0 2%;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: rgb(115, 50, 55);
   margin: 0;
   padding: .5rem;
@@ -397,9 +386,8 @@ nav h1 a:hover {
   color: rgb(130, 90, 70);
 }
 
-/* ====================== Focus ====================== */
-#restaurants-list li a:focus,
-.filter-options select:focus {
+/* ====================== Focus ====================== */   
+*:focus {
   outline: 2px solid rgb(245, 65, 75);
   box-shadow: 0 0 .5rem rgb(245, 65, 75);
 }
