@@ -25,7 +25,7 @@ initMap = () => {
         attributionControl: false
       });
       L.control.attribution({
-        prefix: '<a href="http://leafletjs.com/" tabindex="-1" target="_blank" rel="noopener noreferrer">Teste</a>'
+        prefix: '<a href="http://leafletjs.com/" tabindex="-1" target="_blank" rel="noopener noreferrer">Leaflet</a>'
       }).addTo(newMap);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
         mapboxToken: 'pk.eyJ1IjoiZGVraXNyIiwiYSI6ImNqanoxMHhudTYwZHEzdnJtNWk1bnpqd2YifQ.j88iBaA7iOApByrd4bOHDA',
