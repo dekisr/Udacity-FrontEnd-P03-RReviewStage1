@@ -1,10 +1,10 @@
-let cacheName = 'rr-udacity-p03v1'
+let cacheName = 'rr-udacity-p03v2'
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(cacheName).then((cache) => {
       return cache.addAll([
-        '/',
+        './',
         'index.html',
         'restaurant.html',
         'data/restaurants.json',
