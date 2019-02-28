@@ -6,17 +6,14 @@ var markers = []
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ * Register the service worker after all content are loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
+  registerServiceWorker();
 });
-
-/**
- * Register the service worker after all content are loaded.
- */
-registerServiceWorker();
 
 /**
  * Fetch all neighborhoods and set their HTML.
