@@ -5,7 +5,7 @@
 ### Project Overview
 This is my third project of the Advanced Front-End course, from Udacity Brasil. The goal was to fix and change the app applying the knowledge learned during the lessons.
 
-### Click [**_[here]_**](https://dekisr.github.io/Udacity-FrontEnd-P03-RReviewStage1) to check the project online.
+#### Click [**_[here]_**](https://dekisr.github.io/Udacity-FrontEnd-P03-RReviewStage1) to check the project online.
 
 ### Specification
 **From Udacity:**
