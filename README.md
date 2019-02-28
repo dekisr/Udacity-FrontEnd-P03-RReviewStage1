@@ -5,6 +5,8 @@
 ### Project Overview
 This is my third project of the Advanced Front-End course, from Udacity Brasil. The goal was to fix and change the app applying the knowledge learned during the lessons.
 
+### Click [**_[here]_**](https://dekisr.github.io/Udacity-FrontEnd-P03-RReviewStage1) to check the project online.
+
 ### Specification
 **From Udacity:**
 > For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.  
@@ -12,7 +14,7 @@ This is my third project of the Advanced Front-End course, from Udacity Brasil. 
 
 ## Instructions
 You can clone or download this repository and then you'll need to run a local server (**localhost:8000**).  
-I used the [http-server](https://www.npmjs.com/package/http-server) package, but you can choose anything you want.
+I use the [http-server](https://www.npmjs.com/package/http-server) package, but you can choose anything you want.
 
 For http-server:
 > npm install http-server -g  
