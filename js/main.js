@@ -9,7 +9,7 @@ var markers = []
  * Register the service worker after all content are loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initMap(); // added 
+  initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
   registerServiceWorker();
@@ -229,7 +229,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('./service-worker.js')
         .then(registration => console.log(`ServiceWorker registration successful with scope: ${registration.scope}`))
         .catch(err => console.log(err));
     })
