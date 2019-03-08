@@ -33,7 +33,7 @@ initMap = () => {
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/" tabindex="-1" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/" tabindex="-1" target="_blank" rel="noopener noreferrer">CC-BY-SA</a>, ' +
-          'Imagery © <a href="https://www.mapbox.com/" tabindex="-1" target="_blank" rel="noopener noreferrer">Mapbox</a>',
+          'Imagery Â© <a href="https://www.mapbox.com/" tabindex="-1" target="_blank" rel="noopener noreferrer">Mapbox</a>',
         id: 'mapbox.streets'
       }).addTo(newMap);
       fillBreadcrumb();
